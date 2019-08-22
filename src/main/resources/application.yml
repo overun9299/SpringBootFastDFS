@@ -1,0 +1,22 @@
+server:
+  port: 9280
+#SpringMVC上传文件配置
+  servlet:
+    context-path: /fastdfs
+    multipart:
+      #默认支持文件上传.
+      enabled: true
+      #支持文件写入磁盘.
+      file-size-threshold: 0
+      # 上传文件的临时目录
+      location:
+      # 最大支持文件大小
+      max-file-size: 5MB
+      # 最大支持请求大小
+      max-request-size: 30MB
+overun:
+  fastdfs:
+    connect_timeout_in_seconds: 5
+    network_timeout_in_seconds: 30
+    charset: UTF-8
+    tracker_servers: 39.105.122.65:22122 #多个 trackerServer中间以逗号分隔
